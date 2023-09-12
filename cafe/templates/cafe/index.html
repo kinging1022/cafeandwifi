@@ -1,0 +1,31 @@
+
+{% extends 'cafe/base.html' %}
+{% block body %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Wifi</th>
+            <th scope="col">Cafe Address</th>
+            <th scope="col">Ratings(⭐⭐⭐⭐⭐)</th>
+        </tr>
+    </thead>
+    {% for cafe in cafe_list %}
+    <tbody>
+        <tr>
+            <th scope="row">{{cafe.id}}</th>
+            <td>{{cafe.cafe_name}}</td>
+            <td>{{cafe.cafe_wifi}}</td>
+            <td>{{cafe.cafe_address}}</td>
+            <td>{{cafe.cafe_rating}}</td>
+
+        </tr>
+    </tbody>
+
+    {% endfor %}
+
+{% endblock %}
+
+  
